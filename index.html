@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/1906/premium/1906867.png?token=exp=1657644497~hmac=1c490c9a22d575e1c81decb775ab71db" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body, html {
+            margin: 0px;
+            padding: 0px;
+            background-color: papayawhip;
+        }
+        ::selection {
+            background-color: lightpink;
+        }
+        main {
+            background-image: url("https://i.pinimg.com/564x/73/ca/bf/73cabf9390ea9fab8aae7927f1f57612.jpg");
+            background-size: cover;
+            height: 58vh;
+        }
+        header {
+            background-color: papayawhip;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-shadow: 3px 3px 2px goldenrod;
+            letter-spacing: normal;
+            font-size: larger;
+        }
+        header div span {
+            padding: 20px;
+            margin: 5%;
+        }
+        .button {
+            background-color: wheat;
+            box-shadow: 1px 1px 1px goldenrod;
+            width: 80px;
+            text-align: center;
+            padding: 3px;
+            border-radius: 6px;
+        }
+        .hero {
+            position: relative;
+            padding-top: 6.3%;
+            letter-spacing: 1em;
+            font-size: 2.3em;
+            color: brown;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif, cursive;
+        }
+        #hero-text {
+            padding-top: 3%;
+            letter-spacing: 0.5em;
+            text-align: center;
+        }
+        #hero-button {
+            text-align: center;
+            margin-top: 3%;
+            padding: 10px;
+            background-color: burlywood;
+            border-radius: 6px;
+            width: 125px;
+            margin-left: 45%;
+            letter-spacing: 0.3em;
+        }
+        .box {
+            background-color: rgba(255, 222, 173, 0.4);
+            width: 750px;
+            padding: 50px;
+            height: auto;
+            margin-left: 25%;
+            border-top-left-radius: 40%;
+            border-top-right-radius: 40%;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+        #hero-footer-left {
+            margin-left: 5%;
+            margin-top: 2.3%;
+            float: left;
+            width: 55%;
+        }
+        #hero-footer-left img {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        #hero-footer-right {
+            float: right;
+            margin-right: 0.4%;
+            width: 30%;
+            margin-top: 2.3%;
+            letter-spacing: 0.2em;
+        }
+        #hero-footer-right img {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        .content-mode {
+            text-align: center;
+            height: 100vh;
+        }
+        .column {    
+            background-color: papayawhip;
+            margin-left: 10%;
+            width: 290px;
+            height: 450px;
+            border: 1px solid black;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+        .display1 {
+            background-image: url("https://i.pinimg.com/564x/16/55/fe/1655fe5faac1420fd24b09f7d49eaae8.jpg");
+            background-position: center center;
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+        .display2 {
+            background-image: url("https://i.pinimg.com/564x/51/36/f3/5136f313571abe2513e703b907415b19.jpg");
+            background-position: center center;
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+        .display3{
+            background-image: url("https://i.pinimg.com/564x/59/ae/a0/59aea0916e71b3d57edf7a70204953bc.jpg");
+            background-position: center center;
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+        .content {
+            margin-top: 100%;
+            height: 170px;
+            background-color: wheat;
+            border-top: 1px solid black;
+        }
+        .para {
+            letter-spacing: 0.2em; 
+            font-size: large; 
+            color: black;
+            margin-bottom: 75%; 
+            font-family: 'Times New Roman', Times, serif
+        }
+        .text {
+            letter-spacing: 0.1em; 
+            font-size: small; 
+            margin-bottom: 75%;
+            color: black; 
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+        .box1 {
+            float: right; 
+            position: relative;
+            width: 30%;
+            display: inline-block;
+            border: 1px solid black;
+            height: 65vh;
+            margin-right: 6%;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+            background-image: url("https://i.pinimg.com/564x/db/ce/6a/dbce6acf94078732db86e23096416dfa.jpg");
+            background-position: center center;
+            background-size: contain;
+        }
+        .column1 {
+            background-color: papayawhip;
+            margin-left: 10%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .display4 {
+            background-image: url("https://i.pinimg.com/564x/1a/0e/60/1a0e609503d583312fc0e87d62cdac72.jpg");
+            background-size: contain;
+            background-position: center center;
+            float: left;
+            position: relative;
+        }
+        .display5 {
+            background-image: url("https://i.pinimg.com/564x/e0/30/20/e03020f5f97a0e332ce08ce51d14267f.jpg");
+            background-size: contain;
+            background-position: center center;
+            float: left;
+            position: relative;
+        }
+        .display6 {
+            background-image: url("https://i.pinimg.com/564x/ce/2a/2d/ce2a2d4039e455e673bfca3a3d5ebf0a.jpg");
+            background-size: contain;
+            background-position: center center;
+            float: left;
+            position: relative;
+        }
+        .display7 {
+            background-image: url("https://i.pinimg.com/564x/8a/1c/81/8a1c81a9b0288355b01873ad050d7987.jpg");
+            background-size: contain;
+            background-position: center center;
+            float: left;
+            position: relative;
+        }
+        .likes {
+            margin-left: 10%;
+            padding: 20px;
+            float: left;
+            position: relative;
+            width: 200px;
+        }
+        .box2 {
+            border: 1px solid;
+            outline: 2px dotted brown;
+            outline-offset: 10px;
+            width: 500px;
+            height: 40vh;
+            text-align: center;
+            background-color: rgba(102, 51, 153, 0.1);
+            border-top-left-radius: 300px;
+            border-top-right-radius: 300px;
+            margin-left: 33%;
+        }
+        .grid-i {
+            padding: 10px;
+            font-size: 10px;
+            text-align: justify;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="item1">
+            <img src="https://cdn-icons.flaticon.com/png/512/1906/premium/1906867.png?token=exp=1657644497~hmac=1c490c9a22d575e1c81decb775ab71db" alt="image" width="28" height="22">
+                Flower Boutique
+        </div>
+        <div>
+            <span>Collections</span>
+            <span>About</span>
+            <span>Contact</span>
+        </div>
+        <div class="button">
+            Shop
+        </div>
+    </header>
+    <main>
+        <div class="hero">Custom Dried Flowers</div>
+        <div class="box">
+            <div id="hero-text">Free Delivery on orders above ₹79!</div>
+            <div id="hero-button">SHOP</div>
+        </div>
+        <div id="hero-footer-left">
+            <img src="instagram-free-icon-font.png" alt="Instagram">
+            <img src="whatsapp-free-icon-font.png" alt="Whatsapp">
+            <img src="facebook-free-icon-font.png" alt="Facebook">
+            <img src="envelope-free-icon-font.png" alt="Email">
+        </div>
+        <div id="hero-footer-right">
+            Dried Pampus Collection
+            <img src="./arrow-right-free-icon-font.png" alt="Right arrow">
+        </div>
+    </main>
+    <div class="content-mode">
+        <div style="letter-spacing: 0.1em; color: darkgoldenrod; padding: 3%; font-size: smaller;" id="yellow">THIS IS WHAT WE DO</div>
+        <div style="letter-spacing: 0.5em; color: black; padding: 2%; font-size: 1.6em; font-family: 'Times New Roman', Times, serif;">Our Services</div>
+        <div style="padding-top: 30px; padding-bottom: 30px;">
+            <div class="column display1">
+                <p class="content">
+                   <span class="para"><br>
+                        Custom Bouquets
+                   </span>
+                   <span class="text"><br><br>
+                        Do you have an acquired taste? 
+                        From your favourite flowers to your rarest hidden secrets, 
+                        we have what you need.
+                        <br><br>READ MORE<br>
+                   </span>
+                </p>
+            </div>
+            <div class="column display2">
+                <p class="content">
+                    <span class="para"><br>
+                        Occasion Flowers
+                   </span>
+                   <span class="text"><br><br>
+                        Favourite flowers for your special day
+                        or the perfect decoration for your next business event.
+                        <br><br>READ MORE<br>
+                   </span>
+                </p>
+            </div>
+            <div class="column display3">
+                <p class="content">
+                    <span class="para"><br>
+                        Premade Bouquets
+                   </span>
+                   <span class="text"><br><br>
+                        Our florists are passionate about creating the most beautiful combinations of selected dried flowers.
+                        <br><br>READ MORE<br>
+                   </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: whitesmoke;height: 54vh;">
+        <div style="margin-top: 2%; margin-left: 5%; float: left; width: 45%;">
+            <div style="letter-spacing: 0.1em;margin-left: 6%;margin-top: 4%; color: darkgoldenrod; padding-top: 50px; font-size: smaller; font-weight: 300;">
+                REMEBER YOUR LOVED ONES
+            </div>
+            <div style="letter-spacing: 0.3em; color: black; padding: 1%; font-size: 1.6em; font-family: 'Times New Roman', Times, serif;">
+                Gift Ideas That Last Longer
+            </div>
+            <div style="font-size: small;letter-spacing: 0.1em;padding: 1%;text-align: justify;">
+                Who doesn't love flowers? Whether you are giving or receiving flowers, 
+                the only downside is how short-lived the happiness is with a fresh bouquet of cut bouquets.
+                We are passionate about creating bouquets that not only look beautiful, but last longer.
+                Our premium dried flower bouquets last upto years.
+                Ask our staff more information about perfect bouquets.
+            </div>
+            <div style="padding: 13px;margin-left: 10%;margin-top: 2%; text-align: center; background-color: wheat; width: 150px; border-radius: 2px; box-shadow: 2px 2px 2px thistle;">
+                LETS GO!
+            </div>
+        </div>
+        <div class="box1"></div>
+    </div>
+    <div style="height: 60vh;">
+        <div style="margin-left: 35%; margin-top: 3%;">
+            <div style="letter-spacing: 0.1em;margin-left: 10%; color: darkgoldenrod; padding: 1%; font-size: smaller;" id="yellow">DRIED FLOWER COLLECTION</div>
+            <div style="letter-spacing: 0.5em; color: black; padding: 1%; font-size: 1.6em; font-family: 'Times New Roman', Times, serif;">See What's Popular</div>
+        </div>
+        <div style="padding-top: 30px; padding-bottom: 30px;">
+            <div class="column1 display4"></div>
+            
+            <div class="column1 display5"></div>
+            
+            <div class="column1 display6"></div>
+            
+            <div class="column1 display7"></div>
+        </div>
+        <div class="likes">
+            <img src="./heart-free-icon-font.png" alt="Likes">609
+            <img src="./comment-alt-free-icon-font.png" alt="Comments" style="margin-left: 20px;">120
+            <img src="./share-free-icon-font.png" alt="Share" style="margin-left: 20px;">
+        </div>
+        <div class="likes">
+            <img src="./heart-free-icon-font.png" alt="Likes">540
+            <img src="./comment-alt-free-icon-font.png" alt="Comments" style="margin-left: 20px;">133
+            <img src="./share-free-icon-font.png" alt="Share" style="margin-left: 20px;">
+        </div>
+        <div class="likes">
+            <img src="./heart-free-icon-font.png" alt="Likes">463
+            <img src="./comment-alt-free-icon-font.png" alt="Comments" style="margin-left: 20px;">192
+            <img src="./share-free-icon-font.png" alt="Share" style="margin-left: 20px;">
+        </div>
+        <div class="likes">
+            <img src="./heart-free-icon-font.png" alt="Likes">743
+            <img src="./comment-alt-free-icon-font.png" alt="Comments" style="margin-left: 20px;">192
+            <img src="./share-free-icon-font.png" alt="Share" style="margin-left: 20px;">
+        </div>
+    </div>
+    <div style="background-color: whitesmoke; height: 40vh; text-align: center; padding-top: 2%;">
+        <div class="box2">
+            <div style="font-size: 1.5em; font-family:'Times New Roman', Times, serif; letter-spacing: 0.2em;padding-top: 14%;">Talk to Our Staff</div>
+            <div style="font-size: small; padding-top: 6%; text-align: center; width: 400px; margin-left: 10%">
+                Trouble choosing your bouquet? Talk to our friendly customer service who can help you among your journey to finding your dream bouquet.
+                We are a long line of passionate florists and believe that everyone has their right bouquet.
+            </div>
+            <div style="margin-top: 5%; background-color: wheat; letter-spacing: 0.1em; border-radius: 3px; width: 150px; padding: 10px; margin-left: 33%; box-shadow: 2px 2px 2px black;">
+                LET'S TALK
+            </div>
+        </div>
+    </div>
+    <div style="height: 38vh;">
+        <br><br><br><hr style="color: black; border: 0.1px dotted black"><br>
+        <div style="width: 30%; margin-left: 2%; padding: 20px; float: left;">
+            <div style="font-size: larger; font-family:'Times New Roman', Times, serif; letter-spacing: 0.2em; padding: 5px; margin-left: 3%;">
+                <img src="https://cdn-icons.flaticon.com/png/512/1906/premium/1906867.png?token=exp=1657644497~hmac=1c490c9a22d575e1c81decb775ab71db" alt="image" width="28" height="22">
+                Flower Boutique
+            </div>
+            <div style="margin-left: 4%; padding: 20px; font-size: small; letter-spacing: 0.1em;">
+                Custom dried flower arrangements that last.
+            </div>
+            <div>
+                <input type="email" name="mail" id="mail" placeholder="Email Address" style="font-size: small; color: black; letter-spacing: 0.1em; width: 175px; border-radius: 5px;border: 0.2px solid thistle; box-shadow: 1px 1px 2px thistle; height: 30px; padding: 15px; margin-left: 9%; margin-top: 1.5%;">
+                <span style="position: relative; background-color: wheat; padding: 10px; margin-left: 3%; letter-spacing: 0.1em; font-size: small; border-radius: 5px; box-shadow: 1px 1px 2px thistle;">
+                    Subscribe
+                </span>
+            </div>
+        </div>
+        <div style="float: right; position: relative; width: 40%; margin-right: 2%;padding: 20px; display: grid; grid-template-columns: auto auto auto;">
+            <div class="grid-i">
+                +44 346 638 903 <br><br>
+                HELLO@FLOWERBOUTIQUE.COM<br><br>
+                FIND A STORE
+            </div>
+            <div class="grid-i">
+                CONTACT US <br><br>
+                ORDERING & PAYMENT <br><br>
+                SHIPPING <br><br>
+                RETURNS <br><br>
+                FAQ <br><br>
+                CARE GUIDE
+            </div>
+            <div class="grid-i">
+                ABOUT US <br><br>
+                WORK WITH US <br><br>
+                PRIVACY POLICY <br><br>
+                TERMS & CONDITIONS <br><br>
+                PRESS ENQUIRIES <br><br>
+            </div>
+        </div>
+    </div>
+    <footer style="height: 5vh; letter-spacing: 0.1em; font-size: small; width: 100%; background-color: thistle;">
+        <span style="width: 30%;color: brown; float: left; margin-left: 2%;padding-top: 5px; position: relative;">
+            &copy; srushtishinde, Inspired By: Fluer Website Design. 
+        </span>
+        <span style="width: 100px;color: brown; text-align: end; margin-left: 50%;float: right; position: relative;">
+            <img src="./instagram-free-icon-font.png" alt="Instagram" style="padding-left: 6px; padding-right: 6px;">
+            <img src="./whatsapp-free-icon-font.png" alt="Whatsapp" style="padding-left: 6px; padding-right: 6px;">
+            <img src="./facebook-free-icon-font.png" alt="Facebook" style="padding-left: 6px; padding-right: 6px;">
+        </span>
+    </footer>
+</body>
+</html>
